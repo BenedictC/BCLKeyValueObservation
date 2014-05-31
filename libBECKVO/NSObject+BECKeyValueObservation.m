@@ -40,7 +40,6 @@
  */
 @property(nonatomic, readonly) dispatch_queue_t queue;
 
-
 /**
  If YES then the callback is invoked asynchronously on queue. If NO then the callback is invoked synchronously on queue.
  */
@@ -76,9 +75,15 @@
     @synchronized(self) {
         const void *key = (__bridge const void *)self;
         static void * dispatchContext = &dispatchContext;
-        dispatch_queue_set_specific(self.queue, key, dispatchContext, NULL);
 
-        return dispatch_get_specific(key) == dispatchContext;
+        //Set a cookie on target queue
+        dispatch_queue_set_specific(self.queue, key, dispatchContext, NULL);
+        //Check if the cookie exists on the current queue, if it is then the current queue IS the target queue.
+        BOOL isOnQueue = (dispatch_get_specific(key) == dispatchContext);
+        //Tidy up
+        dispatch_queue_set_specific(self.queue, key, NULL, NULL);
+
+        return isOnQueue;
     }
 }
 
