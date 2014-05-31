@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A8253482-24C0-4870-A741-C4113AEB2C8A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BECKeyValueObservation</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AB5E10F7-3928-4F95-8BEF-C9D156866119</key>
+		<string>https://github.com/BenedictC/BECKeyValueObservation.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BECKeyValueObservation.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AB5E10F7-3928-4F95-8BEF-C9D156866119</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/BenedictC/BECKeyValueObservation.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AB5E10F7-3928-4F95-8BEF-C9D156866119</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AB5E10F7-3928-4F95-8BEF-C9D156866119</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BECKeyValueObservation</string>
+		</dict>
+	</array>
+</dict>
+</plist>

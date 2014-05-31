@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		82829527193736A600482C53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F1D80C19329DA400955AE6 /* Foundation.framework */; };
+		82829534193736A600482C53 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8276C1C519335CC400E057CB /* XCTest.framework */; };
+		82829535193736A600482C53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F1D80C19329DA400955AE6 /* Foundation.framework */; };
+		82829536193736A600482C53 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828294E3193692B700482C53 /* UIKit.framework */; };
+		82829539193736A600482C53 /* liblibBECKVO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82829526193736A600482C53 /* liblibBECKVO.a */; };
+		82829541193736A600482C53 /* libBECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82829540193736A600482C53 /* libBECKVOTests.m */; };
+		828295481937371F00482C53 /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282951F1936931900482C53 /* NSObject+BECKeyValueObservation.m */; };
+		828295491937372200482C53 /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282951F1936931900482C53 /* NSObject+BECKeyValueObservation.m */; };
+		8282954D1937377500482C53 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8282954C1937377500482C53 /* InfoPlist.strings */; };
+		828295541937385700482C53 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828295531937385700482C53 /* Cocoa.framework */; };
+		828295641937385700482C53 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8276C1C519335CC400E057CB /* XCTest.framework */; };
+		828295651937385700482C53 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828295531937385700482C53 /* Cocoa.framework */; };
+		828295681937385800482C53 /* liblibBECKVOOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 828295521937385700482C53 /* liblibBECKVOOSX.a */; };
+		828295771937386D00482C53 /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282951F1936931900482C53 /* NSObject+BECKeyValueObservation.m */; };
+		828295781937386D00482C53 /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282951F1936931900482C53 /* NSObject+BECKeyValueObservation.m */; };
+		828295791937387200482C53 /* libBECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82829540193736A600482C53 /* libBECKVOTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		82829537193736A600482C53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82F1D80119329DA400955AE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82829525193736A600482C53;
+			remoteInfo = libBECKVO;
+		};
+		828295661937385800482C53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82F1D80119329DA400955AE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 828295511937385700482C53;
+			remoteInfo = libBECKVOOSX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		82829524193736A600482C53 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8276C1C519335CC400E057CB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		828294E3193692B700482C53 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		828294FE193692CB00482C53 /* libBECKVO-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libBECKVO-Prefix.pch"; sourceTree = "<group>"; };
+		8282951C1936930F00482C53 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		8282951E1936931900482C53 /* NSObject+BECKeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BECKeyValueObservation.h"; sourceTree = "<group>"; };
+		8282951F1936931900482C53 /* NSObject+BECKeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BECKeyValueObservation.m"; sourceTree = "<group>"; };
+		82829526193736A600482C53 /* liblibBECKVO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibBECKVO.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		82829533193736A600482C53 /* libBECKVOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libBECKVOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8282953C193736A600482C53 /* libBECKVOTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "libBECKVOTests-Info.plist"; sourceTree = "<group>"; };
+		82829540193736A600482C53 /* libBECKVOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libBECKVOTests.m; sourceTree = "<group>"; };
+		8282954C1937377500482C53 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		828295521937385700482C53 /* liblibBECKVOOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibBECKVOOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		828295531937385700482C53 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		828295561937385700482C53 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		828295571937385700482C53 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		828295581937385700482C53 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		828295631937385700482C53 /* libBECKVOOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libBECKVOOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8282957D19373B5C00482C53 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		8282957E19373B5C00482C53 /* libBECKVOOSXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "libBECKVOOSXTests-Info.plist"; sourceTree = "<group>"; };
+		8282958019373BB800482C53 /* libBECKVOOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libBECKVOOSX-Prefix.pch"; sourceTree = "<group>"; };
+		82F1D80C19329DA400955AE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		82829523193736A600482C53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82829527193736A600482C53 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82829530193736A600482C53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82829534193736A600482C53 /* XCTest.framework in Frameworks */,
+				82829539193736A600482C53 /* liblibBECKVO.a in Frameworks */,
+				82829536193736A600482C53 /* UIKit.framework in Frameworks */,
+				82829535193736A600482C53 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8282954F1937385700482C53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				828295541937385700482C53 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		828295601937385700482C53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				828295681937385800482C53 /* liblibBECKVOOSX.a in Frameworks */,
+				828295651937385700482C53 /* Cocoa.framework in Frameworks */,
+				828295641937385700482C53 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		828294FC193692CB00482C53 /* libBECKVO */ = {
+			isa = PBXGroup;
+			children = (
+				8282951E1936931900482C53 /* NSObject+BECKeyValueObservation.h */,
+				8282951F1936931900482C53 /* NSObject+BECKeyValueObservation.m */,
+				828294FD193692CB00482C53 /* Supporting Files */,
+			);
+			path = libBECKVO;
+			sourceTree = "<group>";
+		};
+		828294FD193692CB00482C53 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				828294FE193692CB00482C53 /* libBECKVO-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8282953A193736A600482C53 /* libBECKVOTests */ = {
+			isa = PBXGroup;
+			children = (
+				82829540193736A600482C53 /* libBECKVOTests.m */,
+				8282953B193736A600482C53 /* Supporting Files */,
+			);
+			path = libBECKVOTests;
+			sourceTree = "<group>";
+		};
+		8282953B193736A600482C53 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8282953C193736A600482C53 /* libBECKVOTests-Info.plist */,
+				8282954C1937377500482C53 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		828295551937385700482C53 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				828295561937385700482C53 /* Foundation.framework */,
+				828295571937385700482C53 /* CoreData.framework */,
+				828295581937385700482C53 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		8282957C19373B5C00482C53 /* libBECKVOOSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				8282957D19373B5C00482C53 /* InfoPlist.strings */,
+				8282957E19373B5C00482C53 /* libBECKVOOSXTests-Info.plist */,
+			);
+			path = libBECKVOOSXTests;
+			sourceTree = "<group>";
+		};
+		8282957F19373BB800482C53 /* libBECKVOOSX */ = {
+			isa = PBXGroup;
+			children = (
+				8282958019373BB800482C53 /* libBECKVOOSX-Prefix.pch */,
+			);
+			path = libBECKVOOSX;
+			sourceTree = "<group>";
+		};
+		82F1D80019329DA400955AE6 = {
+			isa = PBXGroup;
+			children = (
+				8282951C1936930F00482C53 /* README.md */,
+				82F1D80E19329DA400955AE6 /* BECKeyValueObservation */,
+				828294FC193692CB00482C53 /* libBECKVO */,
+				8282953A193736A600482C53 /* libBECKVOTests */,
+				8282957F19373BB800482C53 /* libBECKVOOSX */,
+				8282957C19373B5C00482C53 /* libBECKVOOSXTests */,
+				82F1D80B19329DA400955AE6 /* Frameworks */,
+				82F1D80A19329DA400955AE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		82F1D80A19329DA400955AE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82829526193736A600482C53 /* liblibBECKVO.a */,
+				82829533193736A600482C53 /* libBECKVOTests.xctest */,
+				828295521937385700482C53 /* liblibBECKVOOSX.a */,
+				828295631937385700482C53 /* libBECKVOOSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		82F1D80B19329DA400955AE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82F1D80C19329DA400955AE6 /* Foundation.framework */,
+				8276C1C519335CC400E057CB /* XCTest.framework */,
+				828294E3193692B700482C53 /* UIKit.framework */,
+				828295531937385700482C53 /* Cocoa.framework */,
+				828295551937385700482C53 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82F1D80E19329DA400955AE6 /* BECKeyValueObservation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BECKeyValueObservation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		828295501937385700482C53 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		82829525193736A600482C53 /* libBECKVO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82829542193736A600482C53 /* Build configuration list for PBXNativeTarget "libBECKVO" */;
+			buildPhases = (
+				82829522193736A600482C53 /* Sources */,
+				82829523193736A600482C53 /* Frameworks */,
+				82829524193736A600482C53 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libBECKVO;
+			productName = libBECKVO;
+			productReference = 82829526193736A600482C53 /* liblibBECKVO.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		82829532193736A600482C53 /* libBECKVOTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82829545193736A600482C53 /* Build configuration list for PBXNativeTarget "libBECKVOTests" */;
+			buildPhases = (
+				8282952F193736A600482C53 /* Sources */,
+				82829530193736A600482C53 /* Frameworks */,
+				82829531193736A600482C53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82829538193736A600482C53 /* PBXTargetDependency */,
+			);
+			name = libBECKVOTests;
+			productName = libBECKVOTests;
+			productReference = 82829533193736A600482C53 /* libBECKVOTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		828295511937385700482C53 /* libBECKVOOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 828295711937385800482C53 /* Build configuration list for PBXNativeTarget "libBECKVOOSX" */;
+			buildPhases = (
+				8282954E1937385700482C53 /* Sources */,
+				8282954F1937385700482C53 /* Frameworks */,
+				828295501937385700482C53 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libBECKVOOSX;
+			productName = libBECKVOOSX;
+			productReference = 828295521937385700482C53 /* liblibBECKVOOSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		828295621937385700482C53 /* libBECKVOOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 828295741937385800482C53 /* Build configuration list for PBXNativeTarget "libBECKVOOSXTests" */;
+			buildPhases = (
+				8282955F1937385700482C53 /* Sources */,
+				828295601937385700482C53 /* Frameworks */,
+				828295611937385700482C53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				828295671937385800482C53 /* PBXTargetDependency */,
+			);
+			name = libBECKVOOSXTests;
+			productName = libBECKVOOSXTests;
+			productReference = 828295631937385700482C53 /* libBECKVOOSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		82F1D80119329DA400955AE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BEC;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Benedict Cohen";
+			};
+			buildConfigurationList = 82F1D80419329DA400955AE6 /* Build configuration list for PBXProject "BECKeyValueObservation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 82F1D80019329DA400955AE6;
+			productRefGroup = 82F1D80A19329DA400955AE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				82829525193736A600482C53 /* libBECKVO */,
+				82829532193736A600482C53 /* libBECKVOTests */,
+				828295511937385700482C53 /* libBECKVOOSX */,
+				828295621937385700482C53 /* libBECKVOOSXTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		82829531193736A600482C53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8282954D1937377500482C53 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		828295611937385700482C53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		82829522193736A600482C53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				828295481937371F00482C53 /* NSObject+BECKeyValueObservation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8282952F193736A600482C53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82829541193736A600482C53 /* libBECKVOTests.m in Sources */,
+				828295491937372200482C53 /* NSObject+BECKeyValueObservation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8282954E1937385700482C53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				828295771937386D00482C53 /* NSObject+BECKeyValueObservation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8282955F1937385700482C53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				828295781937386D00482C53 /* NSObject+BECKeyValueObservation.m in Sources */,
+				828295791937387200482C53 /* libBECKVOTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		82829538193736A600482C53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82829525193736A600482C53 /* libBECKVO */;
+			targetProxy = 82829537193736A600482C53 /* PBXContainerItemProxy */;
+		};
+		828295671937385800482C53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 828295511937385700482C53 /* libBECKVOOSX */;
+			targetProxy = 828295661937385800482C53 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		82829543193736A600482C53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/libBECKVO.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libBECKVO/libBECKVO-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		82829544193736A600482C53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/libBECKVO.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libBECKVO/libBECKVO-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		82829546193736A600482C53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libBECKVO/libBECKVO-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "libBECKVOTests/libBECKVOTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		82829547193736A600482C53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libBECKVO/libBECKVO-Prefix.pch";
+				INFOPLIST_FILE = "libBECKVOTests/libBECKVOTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		828295721937385800482C53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libBECKVOOSX/libBECKVOOSX-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		828295731937385800482C53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libBECKVOOSX/libBECKVOOSX-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		828295751937385800482C53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libBECKVOOSX/libBECKVOOSX-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "libBECKVOOSXTests/libBECKVOOSXTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		828295761937385800482C53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libBECKVOOSX/libBECKVOOSX-Prefix.pch";
+				INFOPLIST_FILE = "libBECKVOOSXTests/libBECKVOOSXTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		82F1D81519329DA400955AE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		82F1D81619329DA400955AE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		82829542193736A600482C53 /* Build configuration list for PBXNativeTarget "libBECKVO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82829543193736A600482C53 /* Debug */,
+				82829544193736A600482C53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		82829545193736A600482C53 /* Build configuration list for PBXNativeTarget "libBECKVOTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82829546193736A600482C53 /* Debug */,
+				82829547193736A600482C53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		828295711937385800482C53 /* Build configuration list for PBXNativeTarget "libBECKVOOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				828295721937385800482C53 /* Debug */,
+				828295731937385800482C53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		828295741937385800482C53 /* Build configuration list for PBXNativeTarget "libBECKVOOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				828295751937385800482C53 /* Debug */,
+				828295761937385800482C53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		82F1D80419329DA400955AE6 /* Build configuration list for PBXProject "BECKeyValueObservation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82F1D81519329DA400955AE6 /* Debug */,
+				82F1D81619329DA400955AE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 82F1D80119329DA400955AE6 /* Project object */;
+}
