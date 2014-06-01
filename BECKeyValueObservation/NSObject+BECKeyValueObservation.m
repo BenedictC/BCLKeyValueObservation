@@ -62,34 +62,18 @@
     _queue = queue;
     _asynchronous = asynchronous;
 
+#ifdef DEBUG
+    BOOL shouldLogDeadlockWarning = queue != NULL && !asynchronous;
+    if (shouldLogDeadlockWarning) {
+        NSLog(@"WARNING: A KVO changeHandler has been registered for synchronous dispatch. Synchronous dispatch is strongly discouraged as it is likely to cause deadlocks. KVO registration details: %@\n This is a DEBUG warning, it will not appear in release builds.", self);
+    }
+#endif
     return self;
 }
 
 
 
 #pragma mark properties
--(BOOL)isOnQueue
-{
-    //We need to be @synchronized because of the unlikely but possible situation when the callback is being invoked
-    //simualtaniously by more than 1 thread.
-    @synchronized(self) {
-        const void *key = (__bridge const void *)self;
-        static void * dispatchContext = &dispatchContext;
-
-        //Set a cookie on target queue
-        dispatch_queue_set_specific(self.queue, key, dispatchContext, NULL);
-        //Check if the cookie exists on the current queue, if it is then the current queue IS the target queue.
-        BOOL isOnQueue = (dispatch_get_specific(key) == dispatchContext);
-        //Tidy up
-        dispatch_queue_set_specific(self.queue, key, NULL, NULL);
-
-        //TODO: Thread A sync calls Thread B. Thread B triggers a KVO for sync on Thread A. Dead lock!
-        return isOnQueue;
-    }
-}
-
-
-
 -(NSString *)description
 {
     return [NSString stringWithFormat:@"<%@ (%p): observer = %p; changeHandler = %@; keyPath = %@; queue = %p; asynchronous = %@>", NSStringFromClass([self class]), self, self.observer, NSStringFromSelector(self.changeHandler), self.keyPath, self.queue, (self.asynchronous) ? @"YES" : @"NO"];
@@ -150,11 +134,10 @@
         return;
     }
 
-    if ([self isOnQueue]) {
-        [invocation invoke];
-        return;
-    }
-
+    //There is a risk of dead lock that we can't mitigate against:
+    //1. Thread A sync calls Thread B.
+    //2. Thread B triggers a KVO for sync on Thread A.
+    //3. Thread B is waiting for Thread A but Thread A is already waiting for Thread B -> Dead lock!
     dispatch_sync(self.queue, ^{
         [invocation invoke];
     });
