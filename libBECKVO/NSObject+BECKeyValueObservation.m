@@ -71,7 +71,7 @@
 -(BOOL)isOnQueue
 {
     //We need to be @synchronized because of the unlikely but possible situation when the callback is being invoked
-    //simualtaniously by 2 threads.
+    //simualtaniously by more than 1 thread.
     @synchronized(self) {
         const void *key = (__bridge const void *)self;
         static void * dispatchContext = &dispatchContext;
@@ -85,6 +85,13 @@
 
         return isOnQueue;
     }
+}
+
+
+
+-(NSString *)description
+{
+    return [NSString stringWithFormat:@"<%@ (%p): observer = %p; changeHandler = %@; keyPath = %@; queue = %p; asynchronous = %@>", NSStringFromClass([self class]), self, self.observer, NSStringFromSelector(self.changeHandler), self.keyPath, self.queue, (self.asynchronous) ? @"YES" : @"NO"];
 }
 
 
@@ -112,10 +119,23 @@
 
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSignature];
     invocation.selector = self.changeHandler;
-    [invocation setArgument:&object atIndex:2];
-    [invocation setArgument:&change atIndex:3];
-    [invocation setArgument:&keyPath atIndex:4];
     [invocation setTarget:self.observer];
+    //Note the intentional lack of 'break;'s
+    switch ([methodSignature numberOfArguments]) {
+        case 5: {
+            __unsafe_unretained id arg4 = keyPath;
+            [invocation setArgument:&arg4 atIndex:4];
+        }
+        case 4: {
+            __unsafe_unretained id arg3 = change;
+            [invocation setArgument:&arg3 atIndex:3];
+        }
+        case 3: {
+            __unsafe_unretained id arg2 = object;
+            [invocation setArgument:&arg2 atIndex:2];
+        }
+    }
+
 
     if (self.queue == NULL) {
         [invocation invoke];
@@ -207,7 +227,7 @@
 #pragma mark observation registration
 -(void)registerObservationOfObject:(NSObject *)object forObserver:(id)observer changeHandler:(SEL)changeHandler keyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options queue:(dispatch_queue_t)queue asynchronous:(BOOL)asynchronous
 {
-    BECReceptionistContext *context = [[BECReceptionistContext alloc] initWithObserver:object changeHandler:changeHandler keyPath:keyPath queue:queue asynchronous:asynchronous];
+    BECReceptionistContext *context = [[BECReceptionistContext alloc] initWithObserver:observer changeHandler:changeHandler keyPath:keyPath queue:queue asynchronous:asynchronous];
     [self getContexts:^(NSMutableSet *contexts) {
         [contexts addObject:context];
     }];
@@ -220,7 +240,7 @@
 -(void)unregisterObservationOfObject:(NSObject *)object forObserver:(id)observer changeHandler:(SEL)changeHandler keyPath:(NSString *)keyPath queue:(dispatch_queue_t)queue asynchronous:(BOOL)asynchronous
 {
     //Construct a new context and use it to find the context that is registered. 
-    BECReceptionistContext *doppelgangerContext = [[BECReceptionistContext alloc] initWithObserver:object changeHandler:changeHandler keyPath:keyPath queue:queue asynchronous:NO];
+    BECReceptionistContext *doppelgangerContext = [[BECReceptionistContext alloc] initWithObserver:observer changeHandler:changeHandler keyPath:keyPath queue:queue asynchronous:asynchronous];
     __block BECReceptionistContext *canonicalContext = nil;
 
     [self getContexts:^(NSMutableSet *contexts) {
@@ -230,11 +250,11 @@
             *stop = YES;
         }];
 
+        //TODO: should this be an assert?
+        NSAssert(canonicalContext != nil, @"Attempted to unregister an observation that has not been registered. Ensure that the arguments used to unregister the observation exactly match the arguments used to register it.");
         [contexts removeObject:canonicalContext];
     }];
 
-    //TODO: should this be an assert?
-    NSAssert(canonicalContext != nil, @"Attempted to unregister an observation that has not been registered. Ensure that the arguments used to unregister the observation exactly match the arguments used to register it.");
     [object removeObserver:self forKeyPath:keyPath context:(__bridge void *)canonicalContext];
 }
 
