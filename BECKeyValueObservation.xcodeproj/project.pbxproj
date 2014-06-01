@@ -23,6 +23,8 @@
 		82D32D9D193B2F7100E5845E /* NSObject+BECKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = 82D32D9B193B2F7100E5845E /* NSObject+BECKeyValueObservation.h */; };
 		82D32D9E193B2F7100E5845E /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D32D9C193B2F7100E5845E /* NSObject+BECKeyValueObservation.m */; };
 		82D32D9F193B2F7100E5845E /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D32D9C193B2F7100E5845E /* NSObject+BECKeyValueObservation.m */; };
+		82D32DA0193B322E00E5845E /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D32D9C193B2F7100E5845E /* NSObject+BECKeyValueObservation.m */; };
+		82D32DA1193B322F00E5845E /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D32D9C193B2F7100E5845E /* NSObject+BECKeyValueObservation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -375,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82829541193736A600482C53 /* libBECKVOTests.m in Sources */,
+				82D32DA0193B322E00E5845E /* NSObject+BECKeyValueObservation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				828295791937387200482C53 /* libBECKVOTests.m in Sources */,
+				82D32DA1193B322F00E5845E /* NSObject+BECKeyValueObservation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
