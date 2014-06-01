@@ -13,16 +13,16 @@
 		82829536193736A600482C53 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828294E3193692B700482C53 /* UIKit.framework */; };
 		82829539193736A600482C53 /* liblibBECKVO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82829526193736A600482C53 /* liblibBECKVO.a */; };
 		82829541193736A600482C53 /* libBECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82829540193736A600482C53 /* libBECKVOTests.m */; };
-		828295481937371F00482C53 /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282951F1936931900482C53 /* NSObject+BECKeyValueObservation.m */; };
-		828295491937372200482C53 /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282951F1936931900482C53 /* NSObject+BECKeyValueObservation.m */; };
 		8282954D1937377500482C53 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8282954C1937377500482C53 /* InfoPlist.strings */; };
 		828295541937385700482C53 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828295531937385700482C53 /* Cocoa.framework */; };
 		828295641937385700482C53 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8276C1C519335CC400E057CB /* XCTest.framework */; };
 		828295651937385700482C53 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828295531937385700482C53 /* Cocoa.framework */; };
 		828295681937385800482C53 /* liblibBECKVOOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 828295521937385700482C53 /* liblibBECKVOOSX.a */; };
-		828295771937386D00482C53 /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282951F1936931900482C53 /* NSObject+BECKeyValueObservation.m */; };
-		828295781937386D00482C53 /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282951F1936931900482C53 /* NSObject+BECKeyValueObservation.m */; };
 		828295791937387200482C53 /* libBECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82829540193736A600482C53 /* libBECKVOTests.m */; };
+		82D32D99193B255C00E5845E /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D32D98193B255C00E5845E /* OCMock.framework */; };
+		82D32D9D193B2F7100E5845E /* NSObject+BECKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = 82D32D9B193B2F7100E5845E /* NSObject+BECKeyValueObservation.h */; };
+		82D32D9E193B2F7100E5845E /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D32D9C193B2F7100E5845E /* NSObject+BECKeyValueObservation.m */; };
+		82D32D9F193B2F7100E5845E /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D32D9C193B2F7100E5845E /* NSObject+BECKeyValueObservation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +59,6 @@
 		828294E3193692B700482C53 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		828294FE193692CB00482C53 /* libBECKVO-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libBECKVO-Prefix.pch"; sourceTree = "<group>"; };
 		8282951C1936930F00482C53 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		8282951E1936931900482C53 /* NSObject+BECKeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BECKeyValueObservation.h"; sourceTree = "<group>"; };
-		8282951F1936931900482C53 /* NSObject+BECKeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BECKeyValueObservation.m"; sourceTree = "<group>"; };
 		82829526193736A600482C53 /* liblibBECKVO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibBECKVO.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		82829533193736A600482C53 /* libBECKVOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libBECKVOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8282953C193736A600482C53 /* libBECKVOTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "libBECKVOTests-Info.plist"; sourceTree = "<group>"; };
@@ -75,6 +73,9 @@
 		8282957D19373B5C00482C53 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		8282957E19373B5C00482C53 /* libBECKVOOSXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "libBECKVOOSXTests-Info.plist"; sourceTree = "<group>"; };
 		8282958019373BB800482C53 /* libBECKVOOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libBECKVOOSX-Prefix.pch"; sourceTree = "<group>"; };
+		82D32D98193B255C00E5845E /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82D32D9B193B2F7100E5845E /* NSObject+BECKeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BECKeyValueObservation.h"; sourceTree = "<group>"; };
+		82D32D9C193B2F7100E5845E /* NSObject+BECKeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BECKeyValueObservation.m"; sourceTree = "<group>"; };
 		82F1D80C19329DA400955AE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -102,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D32D99193B255C00E5845E /* OCMock.framework in Frameworks */,
 				828295541937385700482C53 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,8 +124,6 @@
 		828294FC193692CB00482C53 /* libBECKVO */ = {
 			isa = PBXGroup;
 			children = (
-				8282951E1936931900482C53 /* NSObject+BECKeyValueObservation.h */,
-				8282951F1936931900482C53 /* NSObject+BECKeyValueObservation.m */,
 				828294FD193692CB00482C53 /* Supporting Files */,
 			);
 			path = libBECKVO;
@@ -182,11 +182,20 @@
 			path = libBECKVOOSX;
 			sourceTree = "<group>";
 		};
+		82D32D9A193B2F7100E5845E /* BECKeyValueObservation */ = {
+			isa = PBXGroup;
+			children = (
+				82D32D9B193B2F7100E5845E /* NSObject+BECKeyValueObservation.h */,
+				82D32D9C193B2F7100E5845E /* NSObject+BECKeyValueObservation.m */,
+			);
+			path = BECKeyValueObservation;
+			sourceTree = "<group>";
+		};
 		82F1D80019329DA400955AE6 = {
 			isa = PBXGroup;
 			children = (
 				8282951C1936930F00482C53 /* README.md */,
-				82F1D80E19329DA400955AE6 /* BECKeyValueObservation */,
+				82D32D9A193B2F7100E5845E /* BECKeyValueObservation */,
 				828294FC193692CB00482C53 /* libBECKVO */,
 				8282953A193736A600482C53 /* libBECKVOTests */,
 				8282957F19373BB800482C53 /* libBECKVOOSX */,
@@ -210,6 +219,7 @@
 		82F1D80B19329DA400955AE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82D32D98193B255C00E5845E /* OCMock.framework */,
 				82F1D80C19329DA400955AE6 /* Foundation.framework */,
 				8276C1C519335CC400E057CB /* XCTest.framework */,
 				828294E3193692B700482C53 /* UIKit.framework */,
@@ -219,13 +229,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		82F1D80E19329DA400955AE6 /* BECKeyValueObservation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BECKeyValueObservation;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -233,6 +236,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D32D9D193B2F7100E5845E /* NSObject+BECKeyValueObservation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				828295481937371F00482C53 /* NSObject+BECKeyValueObservation.m in Sources */,
+				82D32D9E193B2F7100E5845E /* NSObject+BECKeyValueObservation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +375,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				82829541193736A600482C53 /* libBECKVOTests.m in Sources */,
-				828295491937372200482C53 /* NSObject+BECKeyValueObservation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				828295771937386D00482C53 /* NSObject+BECKeyValueObservation.m in Sources */,
+				82D32D9F193B2F7100E5845E /* NSObject+BECKeyValueObservation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				828295781937386D00482C53 /* NSObject+BECKeyValueObservation.m in Sources */,
 				828295791937387200482C53 /* libBECKVOTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,6 +622,7 @@
 				82829544193736A600482C53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82829545193736A600482C53 /* Build configuration list for PBXNativeTarget "libBECKVOTests" */ = {
 			isa = XCConfigurationList;
@@ -628,6 +631,7 @@
 				82829547193736A600482C53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		828295711937385800482C53 /* Build configuration list for PBXNativeTarget "libBECKVOOSX" */ = {
 			isa = XCConfigurationList;
@@ -636,6 +640,7 @@
 				828295731937385800482C53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		828295741937385800482C53 /* Build configuration list for PBXNativeTarget "libBECKVOOSXTests" */ = {
 			isa = XCConfigurationList;
@@ -644,6 +649,7 @@
 				828295761937385800482C53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82F1D80419329DA400955AE6 /* Build configuration list for PBXProject "BECKeyValueObservation" */ = {
 			isa = XCConfigurationList;

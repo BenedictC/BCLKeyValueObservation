@@ -83,6 +83,7 @@
         //Tidy up
         dispatch_queue_set_specific(self.queue, key, NULL, NULL);
 
+        //TODO: Thread A sync calls Thread B. Thread B triggers a KVO for sync on Thread A. Dead lock!
         return isOnQueue;
     }
 }
