@@ -76,7 +76,7 @@
 #pragma mark properties
 -(NSString *)description
 {
-    return [NSString stringWithFormat:@"<%@ (%p): observer = %p; changeHandler = %@; keyPath = %@; queue = %p; asynchronous = %@>", NSStringFromClass([self class]), self, self.observer, NSStringFromSelector(self.changeHandler), self.keyPath, self.queue, (self.asynchronous) ? @"YES" : @"NO"];
+    return [NSString stringWithFormat:@"<%@ (%p): observer = %p; changeHandler = %@; keyPath = %@; queue = %s; asynchronous = %@>", NSStringFromClass([self class]), self, self.observer, NSStringFromSelector(self.changeHandler), self.keyPath, dispatch_queue_get_label(self.queue), (self.asynchronous) ? @"YES" : @"NO"];
 }
 
 
@@ -251,10 +251,24 @@
  See header file for documentation for this category.
  */
 @implementation NSObject (BECKeyValueObservationRegistration)
+#pragma mark start sending
+-(void)BEC_startSendingObservationsToObserver:(id)observer changeHandler:(SEL)changeHandler forKeyPath:(NSString *)keyPath
+{
+    [self BEC_startSendingObservationsToObserver:observer changeHandler:changeHandler forKeyPath:keyPath options:0 queue:NULL asynchronous:NO];
+}
+
+
 
 -(void)BEC_startSendingObservationsToObserver:(id)observer changeHandler:(SEL)changeHandler forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options
 {
     [self BEC_startSendingObservationsToObserver:observer changeHandler:changeHandler forKeyPath:keyPath options:options queue:NULL asynchronous:NO];
+}
+
+
+
+-(void)BEC_startSendingObservationsToObserver:(id)observer changeHandler:(SEL)changeHandler forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options queue:(dispatch_queue_t)queue
+{
+    [self BEC_startSendingObservationsToObserver:observer changeHandler:changeHandler forKeyPath:keyPath options:options queue:queue asynchronous:YES];
 }
 
 
@@ -266,9 +280,17 @@
 
 
 
+#pragma mark stop sending
 -(void)BEC_stopSendingObservationsToObserver:(id)observer changeHandler:(SEL)changeHandler forKeyPath:(NSString *)keyPath
 {
     [self BEC_stopSendingObservationsToObserver:observer changeHandler:changeHandler forKeyPath:keyPath queue:NULL asynchronous:NO];
+}
+
+
+
+-(void)BEC_stopSendingObservationsToObserver:(id)observer changeHandler:(SEL)changeHandler forKeyPath:(NSString *)keyPath queue:(dispatch_queue_t)queue
+{
+    [self BEC_stopSendingObservationsToObserver:observer changeHandler:changeHandler forKeyPath:keyPath queue:queue asynchronous:YES];
 }
 
 
