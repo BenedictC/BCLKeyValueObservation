@@ -8,7 +8,6 @@
 
 #import <XCTest/XCTest.h>
 #import "NSObject+BECKeyValueObservation.h"
-#import <OCMock/OCMock.h>
 
 
 
