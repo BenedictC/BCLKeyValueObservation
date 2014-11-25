@@ -121,7 +121,6 @@
         }
     }
 
-
     if (self.queue == NULL) {
         [invocation invoke];
         return;
