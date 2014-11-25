@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820420CE1A253D6400AE3309 /* NSObject+BCLKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = 820420CC1A253D6400AE3309 /* NSObject+BCLKeyValueObservation.h */; };
+		820420CF1A253D6400AE3309 /* NSObject+BCLKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 820420CD1A253D6400AE3309 /* NSObject+BCLKeyValueObservation.m */; };
+		820420D01A253D6400AE3309 /* NSObject+BCLKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 820420CD1A253D6400AE3309 /* NSObject+BCLKeyValueObservation.m */; };
+		820420D31A253E8D00AE3309 /* BCLReceptionist.h in Headers */ = {isa = PBXBuildFile; fileRef = 820420D11A253E8D00AE3309 /* BCLReceptionist.h */; };
+		820420D41A253E8D00AE3309 /* BCLReceptionist.m in Sources */ = {isa = PBXBuildFile; fileRef = 820420D21A253E8D00AE3309 /* BCLReceptionist.m */; };
+		820420D51A253E8D00AE3309 /* BCLReceptionist.m in Sources */ = {isa = PBXBuildFile; fileRef = 820420D21A253E8D00AE3309 /* BCLReceptionist.m */; };
+		820420D81A253ECE00AE3309 /* BCLReceptionistContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 820420D61A253ECE00AE3309 /* BCLReceptionistContext.h */; };
+		820420D91A253ECE00AE3309 /* BCLReceptionistContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 820420D71A253ECE00AE3309 /* BCLReceptionistContext.m */; };
+		820420DA1A253ECE00AE3309 /* BCLReceptionistContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 820420D71A253ECE00AE3309 /* BCLReceptionistContext.m */; };
 		82829527193736A600482C53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F1D80C19329DA400955AE6 /* Foundation.framework */; };
 		82829534193736A600482C53 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8276C1C519335CC400E057CB /* XCTest.framework */; };
 		82829535193736A600482C53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F1D80C19329DA400955AE6 /* Foundation.framework */; };
@@ -20,11 +29,6 @@
 		828295681937385800482C53 /* liblibBECKVOOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 828295521937385700482C53 /* liblibBECKVOOSX.a */; };
 		828295791937387200482C53 /* libBECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82829540193736A600482C53 /* libBECKVOTests.m */; };
 		82D32D99193B255C00E5845E /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D32D98193B255C00E5845E /* OCMock.framework */; };
-		82D32D9D193B2F7100E5845E /* NSObject+BECKeyValueObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = 82D32D9B193B2F7100E5845E /* NSObject+BECKeyValueObservation.h */; };
-		82D32D9E193B2F7100E5845E /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D32D9C193B2F7100E5845E /* NSObject+BECKeyValueObservation.m */; };
-		82D32D9F193B2F7100E5845E /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D32D9C193B2F7100E5845E /* NSObject+BECKeyValueObservation.m */; };
-		82D32DA0193B322E00E5845E /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D32D9C193B2F7100E5845E /* NSObject+BECKeyValueObservation.m */; };
-		82D32DA1193B322F00E5845E /* NSObject+BECKeyValueObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D32D9C193B2F7100E5845E /* NSObject+BECKeyValueObservation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		820420C91A253CB600AE3309 /* BCLKeyValueObservation.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BCLKeyValueObservation.podspec; sourceTree = "<group>"; };
+		820420CC1A253D6400AE3309 /* NSObject+BCLKeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BCLKeyValueObservation.h"; sourceTree = "<group>"; };
+		820420CD1A253D6400AE3309 /* NSObject+BCLKeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BCLKeyValueObservation.m"; sourceTree = "<group>"; };
+		820420D11A253E8D00AE3309 /* BCLReceptionist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLReceptionist.h; sourceTree = "<group>"; };
+		820420D21A253E8D00AE3309 /* BCLReceptionist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLReceptionist.m; sourceTree = "<group>"; };
+		820420D61A253ECE00AE3309 /* BCLReceptionistContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLReceptionistContext.h; sourceTree = "<group>"; };
+		820420D71A253ECE00AE3309 /* BCLReceptionistContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLReceptionistContext.m; sourceTree = "<group>"; };
+		820420DB1A253FFD00AE3309 /* BCLKeyValueObservation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCLKeyValueObservation.h; sourceTree = "<group>"; };
 		8276C1C519335CC400E057CB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		828294E3193692B700482C53 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		828294FE193692CB00482C53 /* libBECKVO-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libBECKVO-Prefix.pch"; sourceTree = "<group>"; };
@@ -76,8 +88,6 @@
 		8282957E19373B5C00482C53 /* libBECKVOOSXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "libBECKVOOSXTests-Info.plist"; sourceTree = "<group>"; };
 		8282958019373BB800482C53 /* libBECKVOOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libBECKVOOSX-Prefix.pch"; sourceTree = "<group>"; };
 		82D32D98193B255C00E5845E /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		82D32D9B193B2F7100E5845E /* NSObject+BECKeyValueObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BECKeyValueObservation.h"; sourceTree = "<group>"; };
-		82D32D9C193B2F7100E5845E /* NSObject+BECKeyValueObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BECKeyValueObservation.m"; sourceTree = "<group>"; };
 		82F1D80C19329DA400955AE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -123,6 +133,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		820420CB1A253D6400AE3309 /* BCLKeyValueObservation */ = {
+			isa = PBXGroup;
+			children = (
+				820420DB1A253FFD00AE3309 /* BCLKeyValueObservation.h */,
+				820420CC1A253D6400AE3309 /* NSObject+BCLKeyValueObservation.h */,
+				820420CD1A253D6400AE3309 /* NSObject+BCLKeyValueObservation.m */,
+				820420D11A253E8D00AE3309 /* BCLReceptionist.h */,
+				820420D21A253E8D00AE3309 /* BCLReceptionist.m */,
+				820420D61A253ECE00AE3309 /* BCLReceptionistContext.h */,
+				820420D71A253ECE00AE3309 /* BCLReceptionistContext.m */,
+			);
+			path = BCLKeyValueObservation;
+			sourceTree = "<group>";
+		};
 		828294FC193692CB00482C53 /* libBECKVO */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,20 +208,12 @@
 			path = libBECKVOOSX;
 			sourceTree = "<group>";
 		};
-		82D32D9A193B2F7100E5845E /* BECKeyValueObservation */ = {
-			isa = PBXGroup;
-			children = (
-				82D32D9B193B2F7100E5845E /* NSObject+BECKeyValueObservation.h */,
-				82D32D9C193B2F7100E5845E /* NSObject+BECKeyValueObservation.m */,
-			);
-			path = BECKeyValueObservation;
-			sourceTree = "<group>";
-		};
 		82F1D80019329DA400955AE6 = {
 			isa = PBXGroup;
 			children = (
 				8282951C1936930F00482C53 /* README.md */,
-				82D32D9A193B2F7100E5845E /* BECKeyValueObservation */,
+				820420C91A253CB600AE3309 /* BCLKeyValueObservation.podspec */,
+				820420CB1A253D6400AE3309 /* BCLKeyValueObservation */,
 				828294FC193692CB00482C53 /* libBECKVO */,
 				8282953A193736A600482C53 /* libBECKVOTests */,
 				8282957F19373BB800482C53 /* libBECKVOOSX */,
@@ -238,7 +254,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82D32D9D193B2F7100E5845E /* NSObject+BECKeyValueObservation.h in Headers */,
+				820420CE1A253D6400AE3309 /* NSObject+BCLKeyValueObservation.h in Headers */,
+				820420D31A253E8D00AE3309 /* BCLReceptionist.h in Headers */,
+				820420D81A253ECE00AE3309 /* BCLReceptionistContext.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,11 +339,11 @@
 		82F1D80119329DA400955AE6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = BEC;
-				LastUpgradeCheck = 0510;
+				CLASSPREFIX = BCL;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Benedict Cohen";
 			};
-			buildConfigurationList = 82F1D80419329DA400955AE6 /* Build configuration list for PBXProject "BECKeyValueObservation" */;
+			buildConfigurationList = 82F1D80419329DA400955AE6 /* Build configuration list for PBXProject "BCLKeyValueObservation" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -368,7 +386,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82D32D9E193B2F7100E5845E /* NSObject+BECKeyValueObservation.m in Sources */,
+				820420D91A253ECE00AE3309 /* BCLReceptionistContext.m in Sources */,
+				820420D41A253E8D00AE3309 /* BCLReceptionist.m in Sources */,
+				820420CF1A253D6400AE3309 /* NSObject+BCLKeyValueObservation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +397,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				82829541193736A600482C53 /* libBECKVOTests.m in Sources */,
-				82D32DA0193B322E00E5845E /* NSObject+BECKeyValueObservation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +404,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82D32D9F193B2F7100E5845E /* NSObject+BECKeyValueObservation.m in Sources */,
+				820420DA1A253ECE00AE3309 /* BCLReceptionistContext.m in Sources */,
+				820420D51A253E8D00AE3309 /* BCLReceptionist.m in Sources */,
+				820420D01A253D6400AE3309 /* NSObject+BCLKeyValueObservation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +415,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				828295791937387200482C53 /* libBECKVOTests.m in Sources */,
-				82D32DA1193B322F00E5845E /* NSObject+BECKeyValueObservation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +511,7 @@
 		828295721937385800482C53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "libBECKVOOSX/libBECKVOOSX-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -504,6 +525,7 @@
 		828295731937385800482C53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "libBECKVOOSX/libBECKVOOSX-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -655,7 +677,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		82F1D80419329DA400955AE6 /* Build configuration list for PBXProject "BECKeyValueObservation" */ = {
+		82F1D80419329DA400955AE6 /* Build configuration list for PBXProject "BCLKeyValueObservation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82F1D81519329DA400955AE6 /* Debug */,

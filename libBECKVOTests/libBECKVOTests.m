@@ -1,26 +1,26 @@
 //
-//  libBECKVOTests.m
-//  libBECKVOTests
+//  libBCLKVOTests.m
+//  libBCLKVOTests
 //
 //  Created by Benedict Cohen on 29/05/2014.
 //  Copyright (c) 2014 Benedict Cohen. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "NSObject+BECKeyValueObservation.h"
+#import "BCLKeyValueObservation.h"
 
 
 
-@interface BECProclaimer : NSObject
+@interface BCTProclaimer : NSObject
 @property(nonatomic) id value;
 @end
 
-@implementation BECProclaimer
+@implementation BCTProclaimer
 @end
 
 
 
-@protocol BECObserver <NSObject>
+@protocol BCTObserver <NSObject>
 -(void)observeProclaimer;
 -(void)observeProclaimer:(id)proclaimer;
 -(void)observeProclaimer:(id)proclaimer change:(NSDictionary *)change;
@@ -29,14 +29,14 @@
 
 
 
-#pragma mark - TODO Replace BECObserver with a mock object
-@interface BECObserver : NSObject
+#pragma mark - TODO Replace BCTObserver with a mock object
+@interface BCTObserver : NSObject
 @property(nonatomic) id observedObject;
 @property(nonatomic) NSDictionary *observedChanges;
 @property(nonatomic) NSString *observedKeyPath;
 @end
 
-@implementation BECObserver
+@implementation BCTObserver
 -(void)observeProclaimer
 {
     self.observedObject = nil;
@@ -77,7 +77,7 @@
 
 @interface libBECKVOTests : XCTestCase
 
-@property(nonatomic) BECProclaimer *proclaimer;
+@property(nonatomic) BCTProclaimer *proclaimer;
 @property(nonatomic) id value;
 @end
 
@@ -88,7 +88,7 @@
 - (void)setUp
 {
     [super setUp];
-    self.proclaimer = [BECProclaimer new];
+    self.proclaimer = [BCTProclaimer new];
 }
 
 
@@ -113,14 +113,14 @@
 #pragma mark - tests callbacks of each selector form receive correct values
 - (void)testZeroArgumentCallback
 {
-    BECObserver *observer = [BECObserver new];
+    BCTObserver *observer = [BCTObserver new];
 
-    [self.proclaimer BEC_startSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer) forKeyPath:KEY_PATH(value) options:0];
+    [self.proclaimer BCL_startSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer) forKeyPath:KEY_PATH(value) options:0];
     [self fireKVO];
     XCTAssertEqualObjects(nil, observer.observedObject, @"???");
     XCTAssertEqualObjects(nil, observer.observedChanges, @"???");
     XCTAssertEqualObjects(nil, observer.observedKeyPath, @"???");
-    [self.proclaimer BEC_stopSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer) forKeyPath:KEY_PATH(value)];
+    [self.proclaimer BCL_stopSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer) forKeyPath:KEY_PATH(value)];
 
     //Test that unregistration has worked.
     id anotherValue = @"This should be nil";
@@ -133,13 +133,13 @@
 
 - (void)testOneArgumentCallback
 {
-    BECObserver *observer = [BECObserver new];
-    [self.proclaimer BEC_startSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:) forKeyPath:KEY_PATH(value) options:0];
+    BCTObserver *observer = [BCTObserver new];
+    [self.proclaimer BCL_startSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:) forKeyPath:KEY_PATH(value) options:0];
     [self fireKVO];
     XCTAssertEqualObjects(self.proclaimer, observer.observedObject, @"???");
     XCTAssertEqualObjects(nil, observer.observedChanges, @"???");
     XCTAssertEqualObjects(nil, observer.observedKeyPath, @"???");
-    [self.proclaimer BEC_stopSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:) forKeyPath:KEY_PATH(value)];
+    [self.proclaimer BCL_stopSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:) forKeyPath:KEY_PATH(value)];
 
     //Test that unregistration has worked.
     id anotherValue = @"This should be nil";
@@ -152,13 +152,13 @@
 
 - (void)testTwoArgumentCallback
 {
-    BECObserver *observer = [BECObserver new];
-    [self.proclaimer BEC_startSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:change:) forKeyPath:KEY_PATH(value) options:NSKeyValueObservingOptionInitial];
+    BCTObserver *observer = [BCTObserver new];
+    [self.proclaimer BCL_startSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:change:) forKeyPath:KEY_PATH(value) options:NSKeyValueObservingOptionInitial];
     [self fireKVO];
     XCTAssertEqualObjects(self.proclaimer, observer.observedObject, @"???");
     XCTAssertTrue([observer.observedChanges isKindOfClass:[NSDictionary class]], @"???"); //Hmmm. I'm not sure how to do this.
     XCTAssertEqualObjects(nil, observer.observedKeyPath, @"???");
-    [self.proclaimer BEC_stopSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:change:) forKeyPath:KEY_PATH(value)];
+    [self.proclaimer BCL_stopSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:change:) forKeyPath:KEY_PATH(value)];
 
     //Test that unregistration has worked.
     id anotherValue = @"This should be nil";
@@ -171,13 +171,13 @@
 
 - (void)testThreeArgumentCallback
 {
-    BECObserver *observer = [BECObserver new];
-    [self.proclaimer BEC_startSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:change:keyPath:) forKeyPath:KEY_PATH(value) options:NSKeyValueObservingOptionInitial];
+    BCTObserver *observer = [BCTObserver new];
+    [self.proclaimer BCL_startSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:change:keyPath:) forKeyPath:KEY_PATH(value) options:NSKeyValueObservingOptionInitial];
     [self fireKVO];
     XCTAssertEqualObjects(self.proclaimer, observer.observedObject, @"???");
     XCTAssertTrue([observer.observedChanges isKindOfClass:[NSDictionary class]], @"???"); //Hmmm. I'm not sure how to do this.
     XCTAssertEqualObjects(KEY_PATH(value), observer.observedKeyPath, @"???");
-    [self.proclaimer BEC_stopSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:change:keyPath:) forKeyPath:KEY_PATH(value)];
+    [self.proclaimer BCL_stopSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:change:keyPath:) forKeyPath:KEY_PATH(value)];
 
     //Test that unregistration has worked.
     id anotherValue = @"This should be nil";
@@ -191,8 +191,8 @@
 #pragma mark - concurrency
 //-(void)testDeadlock
 //{
-//    BECObserver *observer = [BECObserver new];
-//    [self.proclaimer BEC_startSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:change:keyPath:) forKeyPath:KEY_PATH(value) options:NSKeyValueObservingOptionInitial queue:dispatch_get_main_queue() asynchronous:NO];
+//    BCTObserver *observer = [BCTObserver new];
+//    [self.proclaimer BCL_startSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:change:keyPath:) forKeyPath:KEY_PATH(value) options:NSKeyValueObservingOptionInitial queue:dispatch_get_main_queue() asynchronous:NO];
 //    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
 //        [self fireKVO];
 //    });
@@ -200,7 +200,7 @@
 //    XCTAssertEqualObjects(self.proclaimer, observer.observedObject, @"???");
 //    XCTAssertTrue([observer.observedChanges isKindOfClass:[NSDictionary class]], @"???"); //Hmmm. I'm not sure how to do this.
 //    XCTAssertEqualObjects(KEY_PATH(value), observer.observedKeyPath, @"???");
-//    [self.proclaimer BEC_stopSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:change:keyPath:) forKeyPath:KEY_PATH(value) queue:dispatch_get_main_queue() asynchronous:NO];
+//    [self.proclaimer BCL_stopSendingObservationsToObserver:observer changeHandler:@selector(observeProclaimer:change:keyPath:) forKeyPath:KEY_PATH(value) queue:dispatch_get_main_queue() asynchronous:NO];
 //
 //    //Test that unregistration has worked.
 //    id anotherValue = @"This should be nil";
