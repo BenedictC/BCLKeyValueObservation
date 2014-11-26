@@ -33,7 +33,14 @@
 /// Observer is not retained to avoid creating retain cycles and because KVO should not be concerned with memory management. unsafe_unretained is used instead of weak to because not all OS X classes support weak.
 @property(nonatomic, readonly, unsafe_unretained) id observer;
 
-/// The selector to invoke on the observer. See header for the acceptable forms.
+/** 
+ The selector to invoke on the observer. A changeHandler must take one of the following four forms:
+
+-(void)aChangeHandlerWithZeroArguments;
+-(void)aChangeHandlerWithChangedObject:(id)changedObject;
+-(void)aChangeHandlerWithChangedObject:(id)changedObject change:(NSDictionary *)change;
+-(void)aChangeHandlerWithChangedObject:(id)changedObject change:(NSDictionary *)change keyPath:(NSString *)keyPath;
+*/
 @property(nonatomic, readonly) SEL changeHandler;
 
 /// keyPath is needed so that when contexts are unregistered we can find the currently registered context. (It is not need for the invocation because observeValueForKeyPath:ofObject:change:context: provides keyPath when an observation fires.)
