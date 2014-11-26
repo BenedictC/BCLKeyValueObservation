@@ -10,8 +10,7 @@
 
 /*
  
- changeHandler are selectors that follow the same form as action selectors. A changeHandler must take one of the 
- following four forms:
+ A changeHandler must take one of the following four forms:
 
  -(void)aChangeHandlerWithZeroArguments;
  -(void)aChangeHandlerWithChangedObject:(id)changedObject;
@@ -39,8 +38,7 @@
 
 
 /**
- The KEY_PATH macro adds a small degree of compile-time safety by check that a selector exists before converting to a
- string to use as a key path.
+ KEY_PATH adds a small degree of compile-time safety by check that a selector exists before converting to a string to use as a key path.
  */
 #ifndef BCL_KEY
 #ifdef DEBUG
