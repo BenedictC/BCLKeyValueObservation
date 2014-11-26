@@ -17,15 +17,15 @@
 @interface BCLReceptionistContext : NSObject
 
 /**
- <#Description#>
+ Intializes a new receptionist context. DEBUG builds will log a warning for if a synchronous, queued context (i.e. queue != NULL and asynchronous = NO) is created. A synchronous queued context can cause deadlocks.
 
- @param observer      <#observer description#>
- @param changeHandler <#changeHandler description#>
- @param keyPath       <#keyPath description#>
- @param queue         <#queue description#>
- @param asynchronous  <#asynchronous description#>
+ @param observer      The object to be notified
+ @param changeHandler The method selector to invoke on caller
+ @param keyPath       The keyPath of the target
+ @param queue         The queue to invoke the changeHandler on
+ @param asynchronous  YES if the change handler should be invoked asynchronously, NO to be invoked synchronously.
 
- @return <#return value description#>
+ @return A receptionist context.
  */
 -(instancetype)initWithObserver:(id)observer changeHandler:(SEL)changeHandler keyPath:(NSString *)keyPath queue:(dispatch_queue_t)queue asynchronous:(BOOL)asynchronous;
 
@@ -46,11 +46,11 @@
 @property(nonatomic, readonly) BOOL asynchronous;
 
 /**
- <#Description#>
+ Invokes the changeHandler of the observer using the supplied values.
 
- @param keyPath <#keyPath description#>
- @param object  <#object description#>
- @param change  <#change description#>
+ @param keyPath The keyPath of the changed value
+ @param object  The object that changed
+ @param change  The changed values
  */
 -(void)invokeWithKeyPath:(NSString *)keyPath object:(id)object change:(NSDictionary *)change;
 
