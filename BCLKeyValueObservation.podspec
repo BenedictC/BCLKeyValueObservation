@@ -10,29 +10,21 @@
 Pod::Spec.new do |s|
   s.name             = "BCLKeyValueObservation"
   s.version          = "0.1.0"
-  s.summary          = "A short description of BCLKeyValueObservation."
+  s.summary          = "BCLKeyValueObservation is a thin abstraction on top of Apple's KVO system."
   s.description      = <<-DESC
-                       An optional longer description of BCLKeyValueObservation
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+BCLKeyValueObservation is a thin abstraction on top of Apple's KVO system. The goals of BCLKeyValueObservation are:
+- Less boiler plate code (good bye observeValueForKeyPath:ofObject:change:context:)
+- Improve clarity of functionality (imperiative method names)
+- **Not** an excuse to have fun with the runtime
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/BCLKeyValueObservation"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/benedictc/BCLKeyValueObservation"
   s.license          = 'MIT'
   s.author           = { "Benedict Cohen" => "ben@benedictcohen.co.uk" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/BCLKeyValueObservation.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/benedictc/BCLKeyValueObservation.git", :tag => "0.1.0" }
+  # s.social_media_url = 'https://twitter.com/benedictc'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '5.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes'
-  s.resource_bundles = {
-    'BCLKeyValueObservation' => ['Pod/Assets/*.png']
-  }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.source_files = "BCLKeyValueObservation", "BCLKeyValueObservation/**/*.{h,m}"
 end

@@ -3,9 +3,9 @@
 ## What is BCLKeyValueObservation?
 
 BCLKeyValueObservation is a thin abstraction on top of Apple's KVO system. The goals of BCLKeyValueObservation are:
-- Less boiler plate code
-- Improve clarity of functionality
-- **Not** an excuse to have fun with the runtime
+- Less boiler plate code (good bye observeValueForKeyPath:ofObject:change:context:)
+- Improve clarity of functionality (imperiative method names)
+- **Not** an excuse to have fun with the runtime 
 
 BCLKeyValueObservation achieves these by:
 - Encapsulating the receptionist pattern used by KVO and using a target-action inspired pattern
